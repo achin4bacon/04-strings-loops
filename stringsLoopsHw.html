@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Exercise 1
+        var input = "30,40,10,12,22,40"; //find average
+        var arr = input.split(","); //split input at "," 
+        var sum = 0; //start at 0 
+        for (var num of arr) {
+            var asNum = parseFloat(num) //convert from strings to integers
+            sum = sum + asNum; //adds every number in the array to make total
+        }
+        var output = sum / arr.length;
+        console.log(output); //average = sum / numbers in array
+
+    </script>
+
+<script>
+        //Exercise 2
+        var input = ["erty:seidohl:jan11:codecraft",
+            "dave:gray:sep16:codecraft",
+            "sarah:hyunh:apr6:codecraft"];  ///find value between 3rd/4th :
+        for (var line of input) {
+            var splitInput = line.split(":");//split input at ":"
+            var bDay = splitInput[2];//create new variable for birthday, access at index[2]
+            console.log(bDay);//prints birthdays!
+        }
+
+    </script>
+<script>
+        //Exercise 3
+        var input = "a man, a plan, a canal, panama!";
+        var finalString = ""; //creates string for final answer
+        var wordArray = input.split(" "); //splits at the space
+        for (var i = 0; i < wordArray.length; i++) { //creates rule for loop
+            var temp = wordArray[i]; //creates new variable so unnecessary to continue typing wordArray[i] every time
+            temp = temp.charAt(0).toUpperCase() + temp.slice(1); //capitalizes first letter and rejoins to rest of word; still separated
+            finalString += temp + " "; //creates final string using temp and adding spaces back between each array element 
+        };
+        console.log(finalString);//yay! final answer!
+    </script>
+
+<script>
+//Exercise 4
+var input = "hello world how are you - I am happy - that is a good world"; 
+var words = input.split(" "); //splits into array at every space
+var wordCount = 0; //creates variable for word count
+for (var i = 0; i < words.length ; i++){
+    var temp = words[i].length; //creates temp variable to find length of word
+    if(temp === 5){
+        ++wordCount; //if true, adds one to wordCount per 5 letter word
+    }
+}
+console.log(wordCount)
+
+
+</script>
+</body>
+
+</html>
